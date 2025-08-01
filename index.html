@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo com Vários Botões e addEventListener</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Exemplo de Vários Botões com <code>addEventListener</code></h1>
+      <p>
+        O método <code>addEventListener</code> permite associar diferentes eventos a vários botões. 
+        Cada botão pode ter uma ação distinta quando clicado, como alterar o texto, mudar a cor ou exibir uma mensagem.
+      </p>
+
+      <h3>Escolha uma ação:</h3>
+      <button class="action-button" id="button1">Alterar Cor do Texto</button>
+      <button class="action-button" id="button2">Mudar a Mensagem</button>
+      <button class="action-button" id="button3">Ocultar Mensagem</button>
+      <button class="action-button" id="button4">Mostrar Mensagem</button>
+
+      <p id="textMessage">Esta é uma mensagem que mudará com os botões!</p>
+
+      <div class="code-section">
+        <h4>Código JavaScript:</h4>
+        <pre><code>document.getElementById('button1').addEventListener('click', function() {
+  document.getElementById('textMessage').style.color = 'blue';
+});
+document.getElementById('button2').addEventListener('click', function() {
+  document.getElementById('textMessage').textContent = 'A mensagem foi alterada!';
+});
+document.getElementById('button3').addEventListener('click', function() {
+  document.getElementById('textMessage').style.display = 'none';
+});
+document.getElementById('button4').addEventListener('click', function() {
+  document.getElementById('textMessage').style.display = 'block';
+});</code></pre>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
